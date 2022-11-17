@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/4477693573003f1652ccd12eb88f554b?family=DixplayW03-Reg"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper" id="overlappingDiv"></div>
+
+      <canvas></canvas>
+
+      <div id="userInterface" style="display: none">
+        <div class="stat-bar opponent-bar">
+          <div class="info-bar">
+            <div id="opponentName">Squirtle</div>
+            <div>
+              <span class="sex-symbol">♂</span><span class="lv-text">lv.</span
+              ><span>5</span>
+            </div>
+          </div>
+          <div class="health-bar-container">
+            <span class="hp-text">HP</span>
+            <div class="health-bar">
+              <div id="enemyHealthBar" class="health-bar-inner"></div>
+            </div>
+            <div class="border-cover"></div>
+            <div class="arrow-up"></div>
+            <div class="arrow-up-border"></div>
+          </div>
+          <div class="bottom-bar"></div>
+        </div>
+        <div class="stat-bar pokemon-bar">
+          <div class="info-bar">
+            <div>Charmander</div>
+            <div>
+              <span class="sex-symbol">♂</span><span class="lv-text">lv.</span
+              ><span>5</span>
+            </div>
+          </div>
+          <div class="health-bar-container">
+            <span class="hp-text">HP</span>
+            <div class="health-bar">
+              <div id="playerHealthBar" class="health-bar-inner"></div>
+            </div>
+            <div class="border-cover"></div>
+            <div class="arrow-up"></div>
+            <div class="arrow-up-border"></div>
+          </div>
+          <div class="health-stat-bar">
+            <div class="arrow-up"></div>
+            <span class="health-stat"
+              ><span id="currentHealth">100</span>/100</span
+            >
+          </div>
+          <div class="bottom-bar"></div>
+        </div>
+        <div class="attack-bar">
+          <div id="dialogueBox" class="dialogue-box"></div>
+          <div class="attacks-container" id="attacksContainer">
+            <!-- <button>Tackle</button><button>Ember</button><button>attack3</button
+            ><button>attack4</button> -->
+          </div>
+          <div class="attack-type-container">
+            <h1 id="attackType">attack type</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
+      integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="data/audio.js"></script>
+    <script src="data/battleZones.js"></script>
+    <script src="data/collisions.js"></script>
+    <script src="data/attacks.js"></script>
+    <script src="data/pokemons.js"></script>
+    <script src="classes.js"></script>
+    <script src="index.js"></script>
+    <script src="battleScene.js"></script>
+  </body>
+</html>
